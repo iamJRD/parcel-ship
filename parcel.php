@@ -18,6 +18,53 @@
         {
             return $this->width * $this->length * $this->height;
         }
+
+        function costToShip()
+        {
+          $parcelVolume = $this->getVolume();
+          $shipPrice = ($parcelVolume * 0.25) + ($this->weight * .50);
+          return $formatted_price = number_format($shipPrice, 2);
+        }
+
+        function setWidth($newWidth)
+        {
+          $this->width = $newWidth;
+        }
+
+        function getWidth()
+        {
+          return $this->width;
+        }
+
+        function setLength($newLength)
+        {
+          $this->length = $newLength;
+        }
+
+        function getLength()
+        {
+          return $this->length;
+        }
+
+        function setHeight($newHeight)
+        {
+          $this->height = $newHeight;
+        }
+
+        function getHeight()
+        {
+          return $this->height;
+        }
+
+        function setWeight($newWeight)
+        {
+          $this->weight = $newWeight;
+        }
+
+        function getWeight()
+        {
+          return $this->weight;
+        }
     }
 
     $my_parcel = new Parcel($_GET["width"], $_GET["length"], $_GET["height"], $_GET["weight"]);
@@ -32,8 +79,17 @@
 <body>
     <h1>This will be your shipping cost:</h1>
     <?php
-        $newVolume = $my_parcel->getVolume();
-        echo "<h3> $newVolume </h3>";
+        $shippingCost = $my_parcel->costToShip();
+        $parcelWidth = $my_parcel->getWidth();
+        $parcelLength = $my_parcel->getLength();
+        $parcelHeight = $my_parcel->getHeight();
+        $parcelWeight = $my_parcel->getWeight();
+        echo "<h3>$$shippingCost</h3>";
+        echo "<h4>Your package:</h4>";
+        echo "<p>Width: $parcelWidth</p>";
+        echo "<p>Length: $parcelLength</p>";
+        echo "<p>Height: $parcelHeight</p>";
+        echo "<p>Weight: $parcelWeight</p>";
     ?>
 </body>
 </html>
