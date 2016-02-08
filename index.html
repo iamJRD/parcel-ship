@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <title>Find Your Shipping Cost</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Find your shipping cost!</h1>
+        <form action="parcel.php">
+            <div class="form-group">
+                <label for="width">Enter your parcel's width:</label>
+                <input id="width" type="number" name="width">
+            </div>
+            <div class="form-group">
+                <label for="length">Enter your parcel's length:</label>
+                <input id="length" type="number" name="length">
+            </div>
+            <div class="form-group">
+                <label for="height">Enter your parcel's height:</label>
+                <input id="height" type="number" name="height">
+            </div>
+            <div class="form-group">
+                <label for="weight">Enter your parcel's weight:</label>
+                <input id="weight" type="number" name="weight">
+            </div>
+            <button type="submit" class="btn-success">Find your cost!</button>
+        </form>
+    </div>
+</body>
+</html>
