@@ -77,19 +77,27 @@
     <title>Shipping Cost</title>
 </head>
 <body>
-    <h1>This will be your shipping cost:</h1>
+    <div class="container">
     <?php
         $shippingCost = $my_parcel->costToShip();
         $parcelWidth = $my_parcel->getWidth();
         $parcelLength = $my_parcel->getLength();
         $parcelHeight = $my_parcel->getHeight();
         $parcelWeight = $my_parcel->getWeight();
-        echo "<h3>$$shippingCost</h3>";
-        echo "<h4>Your package:</h4>";
-        echo "<p>Width: $parcelWidth</p>";
-        echo "<p>Length: $parcelLength</p>";
-        echo "<p>Height: $parcelHeight</p>";
-        echo "<p>Weight: $parcelWeight</p>";
+
+        if ($parcelWidth == "" || $parcelLength == "" || $parcelHeight == "" || $parcelWeight == "") {
+            echo "<h1>Please fill out all fields!</h1>";
+        }
+        else {
+            echo "<h1>This will be your shipping cost:</h1>";
+            echo "<h3>$$shippingCost</h3>";
+            echo "<h4>Your package:</h4>";
+            echo "<p>Width: $parcelWidth</p>";
+            echo "<p>Length: $parcelLength</p>";
+            echo "<p>Height: $parcelHeight</p>";
+            echo "<p>Weight: $parcelWeight</p>";
+        }
     ?>
+    </div>
 </body>
 </html>
