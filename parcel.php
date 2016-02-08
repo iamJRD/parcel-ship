@@ -1,18 +1,18 @@
 <?php
     class Parcel
     {
-        public $width;
-        public $length;
-        public $height;
-        public $weight;
+        private $width;
+        private $length;
+        private $height;
+        private $weight;
 
-        // function __construct($width, $length, $height, $weight)
-        // {
-        //     $this->width = $width;
-        //     $this->length = $length;
-        //     $this->height = $height;
-        //     $this->weight = $weight;
-        // }
+        function __construct($width, $length, $height, $weight)
+        {
+            $this->width = $width;
+            $this->length = $length;
+            $this->height = $height;
+            $this->weight = $weight;
+        }
 
         function getVolume()
         {
@@ -20,11 +20,7 @@
         }
     }
 
-    $my_parcel = new Parcel($width, $length, $height, $weight);
-    $my_parcel->width = $_GET["width"];
-    $my_parcel->length = $_GET["length"];
-    $my_parcel->height = $_GET["height"];
-    $my_parcel->weight = $_GET["weight"];
+    $my_parcel = new Parcel($_GET["width"], $_GET["length"], $_GET["height"], $_GET["weight"]);
 ?>
 
 <!DOCTYPE html>
