@@ -88,6 +88,7 @@
         if ($parcelWidth == "" || $parcelLength == "" || $parcelHeight == "" || $parcelWeight == "") {
             echo "<h1>Please fill out all fields!</h1>";
         }
+        //nicely organized!
         else {
             echo "<h1>This will be your shipping cost:</h1>";
             echo "<h3>$$shippingCost</h3>";
