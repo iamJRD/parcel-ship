@@ -1,32 +1,40 @@
 # Shipping Cost Calculator
 
-## _*Jared Beckler & Torrence Stratton*, February 8th, 2016_
+#### By: Jared Beckler | Epicodus | February 2016
 
-###Description
+This project was used to get familiar with PHP and take user inputs to determine the shipping cost for a parcel.
 
-_This web app will take user inputs from a form and use PHP to calculate and display the parcel properties and shipping cost._
+## Prerequisites
 
-###Set-Up/Installation
+You will need the following things properly installed on your computer.
 
-* _Clone from our GitHub page at https://github.com/jaredbeckler/parcel-ship_
-* _Open a local server in your terminal to run the app (php -S localhost:8000)_
+* [MAMP](https://www.mamp.info/en/downloads/)
 
-###Known Bugs
+## Installation
 
-* _There are currently no known bugs._
+* `git clone https://github.com/jaredbeckler/parcel-ship` this repository
+* Change into the new directory
 
-###Support and Contact Details
+## Running / Development
 
-_You can reach us through GitHub comments for any support._
+* Start MAMP
+* In your web browser, go to `localhost:8889` to view the app
 
-###Technologies Used
+## Known Bugs
 
-* _HTML_
-* _Bootstrap_
-* _PHP_
+There are currently no known bugs.
 
-####License
+## Support and contact details
 
-*This software is licensed under the MIT license.*
+If you have any issues, questions, ideas, or concerns contact me through GitHUb. If you would like to make a contribution to the code, feel free to do so and notify me by e-mail.
 
-Copyright (c) 2016 *Jared Beckler & Torrence Stratton*
+## Technologies Used
+
+* HTML
+* CSS
+* PHP
+* mySQL
+
+### License
+
+Copyright &copy; 2016  |  Jared Beckler  |  Epicodus  |  Portland, OR
